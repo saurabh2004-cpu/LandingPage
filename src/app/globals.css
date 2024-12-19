@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation Classes */
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Hover Effect for Circular Images */
+.slice-1:hover,
+.slice-2:hover,
+.slice-3:hover,
+.slice-4:hover {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease-in-out;
+}
+
+
+/*  */
+/* Fade-in and slide-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility class for fade-up animation */
+.fade-in {
+  opacity: 0; /* Initial state for smooth animation */
+  transform: translateY(20px); /* Initial slide-up position */
+  animation: fadeUp 1s ease-out forwards; /* Trigger fade-up animation */
+}
+
+.delay-300 {
+  animation-delay: 0.3s; /* Delay for staggered animations */
+}
+
+.delay-500 {
+  animation-delay: 0.5s; /* Additional delay for longer stagger */
+}
+
+/* Trigger animations on hover using a parent group */
+.group:hover .group-hover-slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.group:hover .group-hover-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.group:hover .group-hover-fade-up {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+
