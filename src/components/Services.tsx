@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Activity, HandMetal, Brain, Users, Workflow, Timer, } from 'lucide-react'
+import { ArrowRight, Activity, HandMetal, Brain, Users, Workflow, Timer } from 'lucide-react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Button from './Button'
@@ -16,46 +16,47 @@ const services: Service[] = [
   {
     icon: Activity,
     title: "Manual Therapy",
-    description: "specialized form of physical therapy delivered through hands-on techniques.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Specialized form of physical therapy delivered through hands-on techniques.",
+    image: "/images/5.jpg",
   },
   {
     icon: Brain,
     title: "Chronic Pain",
-    description: "refers to persistent pain even after the underlying injury or illness has healed.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Refers to persistent pain even after the underlying injury or illness has healed.",
+    image: "/images/6.jpg",
   },
   {
     icon: HandMetal,
     title: "Hand Therapy",
-    description: "specialized area of physiotherapy that focuses on hand, wrist, and forearm.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Specialized area of physiotherapy that focuses on hand, wrist, and forearm.",
+    image: "/images/7.jpg",
   },
   {
     icon: Users,
     title: "Group Therapy",
-    description: "therapeutic sessions conducted in small groups for shared recovery goals.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Therapeutic sessions conducted in small groups for shared recovery goals.",
+    image: "/images/8.jpg",
   },
   {
     icon: Workflow,
     title: "Exercise Programs",
-    description: "customized exercise routines designed for your specific condition.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Customized exercise routines designed for your specific condition.",
+    image: "/images/9.jpg",
   },
   {
     icon: Timer,
     title: "Recovery Planning",
-    description: "structured approach to help you achieve optimal recovery outcomes.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.JZ5pkH8RKD78s8vqXrd3dwHaEq&pid=Api&P=0&h=220",
+    description: "Structured approach to help you achieve optimal recovery outcomes.",
+    image: "/images/10.jpg",
   },
 ]
 
 export const Services = () => {
   return (
     <div>
-      <section className="relative overflow-hidden px-36">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden px-5 md:px-12 lg:px-36 py-16 bg-[#e5eaec] rounded-t-[50px]">
+        <div className="container mx-auto">
+          {/* Header Section */}
           <motion.p
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -71,7 +72,7 @@ export const Services = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-2xl"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
             We Provide The Best Services
           </motion.h2>
@@ -81,11 +82,18 @@ export const Services = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-gray-600 mb-12 max-w-2xl"
+            className="text-gray-600 mb-12 max-w-3xl"
           >
-            We offer top-quality physiotherapy services tailored to your needs. Our expert therapists use advanced techniques to treat pain, improve mobility.
+            We offer top-quality physiotherapy services tailored to your needs. Our expert therapists use advanced techniques to treat pain and improve mobility.
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* Call to Action Button */}
+          <div className="mt-8 flex justify-center">
+            <Button text="Make An Appointment" icon={<ArrowRight className="w-5 h-5" />} />
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -94,37 +102,35 @@ export const Services = () => {
                 transition={{ duration: 0.5, delay: 0.2 * index }}
                 viewport={{ once: true }}
               >
-                {/* Card Container with Border Radius */}
-                <div className="group relative rounded-2xl overflow-hidden z-10 shadow-lg">
-                  {/* Background Image with Zoom Effect */}
-                  <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110 rounded-2xl">
+                <div className="group relative rounded-2xl overflow-hidden shadow-lg">
+                  {/* Image */}
+                  <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110 z-10">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
                     />
-                    {/* Dark Overlay */}
-                    <div className="absolute inset-0 bg-black/50 rounded-2xl" />
+                    <div className="absolute inset-0 bg-black/50" />
                   </div>
 
                   {/* Content */}
-                  <div className="relative p-6 min-h-[320px] flex flex-col rounded-2xl">
-                    {/* Icon Section */}
+                  <div className="relative p-6 min-h-[320px] flex flex-col">
+                    {/* Icon */}
                     <div className="ml-4 w-14 h-16 relative bottom-6 z-10 rounded-br-[8px] rounded-bl-[8px] bg-white/10 flex items-center justify-center transition-colors group-hover:bg-blue-600">
-                      <service.icon className="w-6 h-6 text-white transition-colors" />
+                      <service.icon className="w-6 h-6 text-white" />
                     </div>
 
-                    {/* Text Content */}
+                    {/* Title and Description */}
                     <h3 className="text-2xl font-semibold text-white mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-white/80 mb-8">
+                    <p className="text-white/80 mb-4">
                       {service.description}
                     </p>
 
                     {/* Arrow Button */}
-                    <div className="mt-auto">
-                      <button className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-colors ">
+                    <div className="mt-auto sm:mt-0 flex sm:flex-row flex-col sm:items-center">
+                      <button className="mt-4 sm:mt-0 w-full sm:w-10 h-10 sm:rounded-full rounded-lg bg-white/10 flex items-center justify-center transition-colors hover:bg-blue-600">
                         <ArrowRight className="w-5 h-5 text-white" />
                       </button>
                     </div>
@@ -133,23 +139,22 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-
-
-          <section className="absolute top-8 right-8 p-24">
-            <Button text="Make An Appointment" icon={<ArrowRight className="w-5 h-5" />} />
-          </section>
         </div>
       </section>
 
-      <div className="h-full justify-center align-middle flex text-white bg-[#003344] py-24 rounded-tr-[68px] rounded-tl-[68px] relative mb-[-60px] mt-[-75px] z-[-1] px-5">
+      {/* Footer Section */}
+      <div className="h-full flex justify-center items-center text-white bg-[#003344] py-16 md:py-24 rounded-t-[50px] bottom-[118px] relative">
         <motion.p
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
           className="flex items-center gap-2 text-lg font-medium"
-        >Find Out More About our Services  <Link href="/" ><ArrowRight className="w-4 h-4 hover:bg-gray-600" /></Link>
-
+        >
+          Find Out More About our Services  
+          <Link href="/">
+            <ArrowRight className="w-4 h-4 hover:bg-gray-600" />
+          </Link>
         </motion.p>
       </div>
     </div>

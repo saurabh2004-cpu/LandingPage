@@ -39,13 +39,13 @@ const itemVariants = {
 export function Features() {
   return (
     <section className="bg-[#023047] text-white py-8 rounded-[50px] relative top-[188px] mb-4">
-      <div className="container mx-auto px-4 flex justify-around">
+      <div className="container mx-auto px-4 flex lg:justify-around">
         <motion.div
-          variants={containerVariants}
+          variants={containerVariants} 
           initial="hidden"
           whileInView="visible" // Animation triggered on viewport entry
           viewport={{ once: true, amount: 0.3 }} // Runs once, when 30% of the container is visible
-          className="grid grid-cols-1 md:grid-cols-3 gap-20 md:divide-x divide-white/20 mb-24"
+          className="grid grid-cols-1 md:grid-cols-3  gap-4 sm:gap-6 md:gap-8 lg:gap-20 md:divide-x divide-white/20 mb-24"
         >
           {features.map((feature, index) => {
             const Icon = feature.icon

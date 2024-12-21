@@ -1,6 +1,5 @@
 'use client'
 import { HowItWorks } from "@/components/HowItWorks";
-import { Main } from "../components/Main";
 import Navbar from "../components/Navbar";
 import { TopBar } from "../components/Topbar";
 import { AboutUs } from "@/components/AboutUs";
@@ -12,6 +11,7 @@ import { Footer } from "@/components/Footer";
 import NewsAndBlogs from "@/components/NewsAndBlogs";
 import useMediaLoader from "./Hooks/mediaLoader";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import { Hero } from "@/components/Hero";
 
 export default function Home() {
   const isLoading = false
@@ -24,7 +24,7 @@ export default function Home() {
         <>
           <TopBar />
           <Navbar />
-          <Main />
+          <Hero />
           {/* <Features /> */}
           <AboutUs />
           <Rehabilitation />

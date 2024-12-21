@@ -36,88 +36,28 @@ export const HowItWorks = () => {
 
     // Images array
     const images = [
-        'https://aica.com/wp-content/uploads/2024/09/How-Physiotherapy-Can-Help-You-AICA-Orthopedics-scaled-1.jpg',
-        'https://aica.com/wp-content/uploads/2024/09/How-Physiotherapy-Can-Help-You-AICA-Orthopedics-scaled-1.jpg',
-        'https://aica.com/wp-content/uploads/2024/09/How-Physiotherapy-Can-Help-You-AICA-Orthopedics-scaled-1.jpg',
-        'https://aica.com/wp-content/uploads/2024/09/How-Physiotherapy-Can-Help-You-AICA-Orthopedics-scaled-1.jpg',
+        '/images/11.jpg',
+        '/images/12.jpg',
+        '/images/13.jpg',
+        '/images/14.jpg',
     ]
 
     return (
-        <div className="min-h-screen w-full flex flex-col lg:flex-row bg-white p-24 justify-center align-center rounded-t-[70px] relative top-[-63px]">
-            {/* Left Section - Image Grid */}
-            <div className="w-full lg:w-1/2 relative overflow-hidden">
-                <div className="h-full w-full p-24 flex">
-                    <div className="h-full w-full">
-                        <div className="h-1/3 w-full">
-                            <motion.img
-                                src={images[0]}
-                                alt="Treatment 1"
-                                className="w-full h-full object-cover"
-                                initial={{ x: -100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.5 }} // Trigger when 50% in viewport
-                                transition={{ duration: 0.8 }}
-                            />
-                        </div>
-
-                        <div className="h-2/3 w-full">
-                            <motion.img
-                                src={images[1]}
-                                alt="Treatment 2"
-                                className="w-full h-full object-cover"
-                                initial={{ x: -100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.8 }}
-                            />
-                        </div>
-                    </div>
-
-                    <div className="h-full w-full">
-                        <div className="h-4/6 w-full">
-                            <motion.img
-                                src={images[2]}
-                                alt="Treatment 3"
-                                className="w-full h-full object-cover"
-                                initial={{ x: -100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.8 }}
-                            />
-                        </div>
-
-                        <div className="h-2/6 w-full">
-                            <motion.img
-                                src={images[3]}
-                                alt="Treatment 4"
-                                className="w-full h-full object-cover"
-                                initial={{ x: -100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.8 }}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Overlay to create depth effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent pointer-events-none" />
-            </div>
-
-            {/* Right Section - Content */}
-            <div className="w-full lg:w-[50%] mx-auto p-4 lg:p-8">
+        <div className="min-h-screen w-full flex flex-col lg:flex-row-reverse bg-white p-6 lg:p-24 justify-center align-center rounded-t-[50px] relative bottom-[62px] ">
+            {/* Top Section - Content */}
+            <div className="w-full mx-auto p-4 lg:p-8">
                 {/* Subtitle */}
                 <p className="text-blue-600 flex items-center gap-2 text-sm font-medium mb-2">
                     / How It Works
                 </p>
 
                 {/* Main Title */}
-                <h1 className="text-3xl lg:text-5xl font-medium text-[#0B2C3D] leading-tight mb-8">
+                <h1 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-[#0B2C3D] leading-tight mb-8">
                     We Proudly Give Quality Treatment
                 </h1>
 
                 {/* Service Cards */}
-                <div className="space-y-2">
+                <div className="space-y-4">
                     {services.map((service) => (
                         <button
                             key={service.id}
@@ -125,7 +65,7 @@ export const HowItWorks = () => {
                             className={`w-full text-left ${expandedCard === service.id
                                 ? 'bg-[#0B2C3D] text-white'
                                 : 'bg-gray-50 hover:bg-gray-100'
-                                } rounded-lg transition-all duration-300`}
+                                } rounded-lg transition-all duration-300 focus:outline focus:outline-blue-500`}
                         >
                             <div className="p-4 flex items-center justify-between">
                                 <div className="flex items-center gap-4">
@@ -137,7 +77,7 @@ export const HowItWorks = () => {
                                     >
                                         {service.icon}
                                     </div>
-                                    <span className="text-lg lg:text-xl">{service.title}</span>
+                                    <span className="text-lg sm:text-xl">{service.title}</span>
                                 </div>
                                 {expandedCard === service.id ? (
                                     <ChevronUp className="w-5 h-5" />
@@ -153,6 +93,26 @@ export const HowItWorks = () => {
                         </button>
                     ))}
                 </div>
+            </div>
+
+            {/* Bottom Section - Image Grid */}
+            <div className="w-full relative overflow-hidden mt-12">
+                <div className="grid grid-cols-2 gap-2 p-6 lg:p-24">
+                    {images.map((image, index) => (
+                        <motion.img
+                            key={index}
+                            src={image}
+                            alt={`Treatment ${index + 1}`}
+                            className="w-full h-full object-cover aspect-video rounded-lg"
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.8 }}
+                        />
+                    ))}
+                </div>
+                {/* Overlay to create depth effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent pointer-events-none" />
             </div>
         </div>
     )

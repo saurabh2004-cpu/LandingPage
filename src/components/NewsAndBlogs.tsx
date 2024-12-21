@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, } from "@/components/ui/card"
 import { ChevronRight } from 'lucide-react'
 import Button from './Button'
 
@@ -20,21 +20,21 @@ const blogPosts: BlogPost[] = [
     title: "Top 10 Benefits of Physiotherapy for Injury Recovery",
     date: "September 15, 2024",
     tag: "Manual Therapy",
-    image: "https://happipuncture.co.nz/wp-content/uploads/2021/09/35.png",
+    image: "/images/21.jpg",
   },
   {
     id: 2,
     title: "How to Speed Up Your Post-Surgery Recovery with Physiocare",
     date: "September 12, 2024",
     tag: "Chronic Pain",
-    image: "https://happipuncture.co.nz/wp-content/uploads/2021/09/35.png",
+    image: "/images/19.jpg",
   },
   {
     id: 3,
     title: "The Role of Physiotherapy in Managing Chronic Pain",
     date: "September 9, 2024",
     tag: "Hand Therapy",
-    image: "https://happipuncture.co.nz/wp-content/uploads/2021/09/35.png",
+    image: "/images/20.jpg",
   },
 ]
 
@@ -43,7 +43,7 @@ export default function NewsAndBlogs() {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
-    <section ref={ref} className="py-16 px-4 md:px-40 bg-white w-full mx-auto rounded-t-[68px] relative bottom-[65px]">
+    <section ref={ref} className="py-16 px-4 md:px-40 bg-white w-full mx-auto rounded-t-[50px] relative bottom-[65px]">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
         <div className="space-y-2">
           <motion.p
@@ -68,12 +68,12 @@ export default function NewsAndBlogs() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          
           <Button text={'View All Blog'} icon={<ChevronRight className="w-4 h-4" />} />
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Responsive Grid: 1 column for mobile, 2 columns for medium screens, 3 columns for large screens */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post, index) => (
           <motion.div
             key={post.id}
@@ -111,14 +111,13 @@ export default function NewsAndBlogs() {
                 </h3>
               </CardHeader>
 
-              <CardFooter>
-                <Button 
-                  variant="link" 
-                  className="p-0 h-auto text-[#0B3558] hover:text-[#0B3558]/80 font-medium"
+              <CardFooter >
+                <button 
+                  className="p-0 h-auto text-[#0B3558] hover:text-[#0B3558]/80 font-medium flex items-center jsustify-center"
                 >
                   Read More
                   <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
+                </button>
               </CardFooter>
             </Card>
           </motion.div>

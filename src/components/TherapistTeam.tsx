@@ -1,34 +1,33 @@
 import { motion } from 'framer-motion';
-import { Facebook, Youtube, Instagram, Twitter, ArrowRight } from 'lucide-react'
+import { Facebook, Youtube, Instagram, Twitter, ArrowRight } from 'lucide-react';
 import Button from './Button';
-// Import other necessary icons like Facebook, Youtube, Instagram, Twitter here
 
 const team = [
     {
         name: 'Dr. Emily Brown',
         role: 'Senior Physiotherapist',
-        image: 'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-142152685722142y8x.png'
+        image: '/images/15.jpg'
     },
     {
         name: 'Dr. Lisa Johnson',
         role: 'Pediatric Therapist',
-        image: 'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-142152685722142y8x.png'
+        image: '/images/16.png'
     },
     {
         name: 'Dr. Jessica Wilson',
         role: 'Neurological Therapist',
-        image: 'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-142152685722142y8x.png'
+        image: '/images/17.jpg'
     },
     {
         name: 'Dr. Linda Thomas',
         role: 'Orthopedic Therapist',
-        image: 'https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-142152685722142y8x.png'
+        image: '/images/18.jpg'
     }
-]
+];
 
 export const TherapistTeam = () => {
     return (
-        <div className="w-full bg-white px-4 md:px-16 lg:px-40 py-16 relative rounded-t-[68px]">
+        <div className="w-full bg-white px-4 md:px-16 lg:px-40 py-16 relative rounded-t-[50px] top-[-47px] z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
                 <div>
                     <motion.p
@@ -53,7 +52,9 @@ export const TherapistTeam = () => {
                 
                 <Button text="View All Team" icon={<ArrowRight className="w-4 h-4" />} />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 p-16">
+
+            {/* Team Member Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 p-4 lg:p-16">
                 {team.map((member, index) => (
                     <motion.div
                         key={member.name}
@@ -71,13 +72,13 @@ export const TherapistTeam = () => {
                                     className="w-full h-full bg-[#d4d8e0] object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100  transition-all duration-300">
+                            <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                 {[Facebook, Youtube, Instagram, Twitter].map((Icon, i) => (
                                     <button
                                         key={i}
-                                        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors hover:scale-110 "
+                                        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors hover:scale-110"
                                     >
-                                        <Icon className="w-4 h-4 text-[#0B2C3D] " />
+                                        <Icon className="w-4 h-4 text-[#0B2C3D]" />
                                     </button>
                                 ))}
                             </div>
@@ -94,5 +95,3 @@ export const TherapistTeam = () => {
         </div>
     );
 };
-
-

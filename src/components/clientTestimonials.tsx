@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
-import useEmblaCarousel from 'embla-carousel-react'
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import useEmblaCarousel from 'embla-carousel-react';
 
 const testimonials = [
   {
@@ -30,38 +30,26 @@ const testimonials = [
     title: "Office Worker",
     avatar: "https://demo1.imithemes.com/html/born-to-give/images/post-detail1.jpg"
   },
-  {
-    text: "Outstanding care and attention to detail. The staff is knowledgeable and truly cares about patient recovery.",
-    name: "Sarah M.",
-    title: "Yoga Instructor",
-    avatar: "https://demo1.imithemes.com/html/born-to-give/images/post-detail1.jpg"
-  },
-  {
-    text: "I've had chronic shoulder pain for years. Their targeted approach has made a significant difference in my daily life.",
-    name: "Michael R.",
-    title: "Office Worker",
-    avatar: "https://demo1.imithemes.com/html/born-to-give/images/post-detail1.jpg"
-  }
-]
+];
 
 export const ClientTestimonials = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
 
   const scrollPrev = () => {
-    if (emblaApi) emblaApi.scrollTo(emblaApi.selectedScrollSnap() - 2)
-  }
+    if (emblaApi) emblaApi.scrollPrev();
+  };
 
   const scrollNext = () => {
-    if (emblaApi) emblaApi.scrollTo(emblaApi.selectedScrollSnap() + 2)
-  }
+    if (emblaApi) emblaApi.scrollNext();
+  };
 
   return (
-    <div ref={ref} className="h-full bg-[#0B2C3D] px-4 py-16 lg:px-16 relative overflow-hidden rounded-t-[68px]">
+    <div ref={ref} className="h-full bg-[#0B2C3D] px-4 py-16 lg:px-16 relative overflow-hidden rounded-t-[50px]">
       <div className="max-w-7xl mx-auto my-16 flex flex-col lg:flex-row gap-16">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           className="lg:w-1/2"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -96,7 +84,7 @@ export const ClientTestimonials = () => {
         </motion.div>
 
         {/* Testimonials Section */}
-        <motion.div 
+        <motion.div
           className="lg:w-1/2 relative"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -105,7 +93,10 @@ export const ClientTestimonials = () => {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-[0_0_50%] min-w-0 pr-6">
+                <div
+                  key={index}
+                  className="flex-[0_0_100%] md:flex-[0_0_50%] min-w-0 pr-6"
+                >
                   <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -146,7 +137,7 @@ export const ClientTestimonials = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Navigation Buttons */}
           <div className="flex gap-4 mt-6">
             <button
@@ -171,6 +162,5 @@ export const ClientTestimonials = () => {
       <div className="absolute top-0 left-0 w-64 h-64 border-4 border-white/10 rounded-full -mt-32 -ml-32" />
       <div className="absolute bottom-0 right-0 w-64 h-64 border-4 border-white/10 rounded-full -mb-32 -mr-32" />
     </div>
-  )
-}
-
+  );
+};

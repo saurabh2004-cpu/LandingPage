@@ -6,8 +6,9 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'luci
 export function TopBar() {
   return (
     <div className="w-full bg-[#003344] text-white px-4 py-4 font-m">
-      <div className="container mx-auto flex items-center justify-around mb-16 ">
-        <div className="flex items-center space-x-6 text-md relative l-4 ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center lg:justify-around md:justify-between lg:mb-16 space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 text-md">
+          {/* Mobile Number */}
           <Link
             href="tel:+1234698-5245"
             className="flex items-center gap-2 hover:text-gray-200"
@@ -16,6 +17,7 @@ export function TopBar() {
             <span>+(123) 698-5245</span>
           </Link>
 
+          {/* Email */}
           <Link
             href="mailto:info@domain.com"
             className="flex items-center gap-2 hover:text-gray-200"
@@ -24,12 +26,14 @@ export function TopBar() {
             <span>info@domain.com</span>
           </Link>
 
-          <div className="flex items-center gap-2">
+          {/* Address  */}
+          <div className="hidden md:flex items-center gap-2">
             <MapPin className="h-4 w-4" />
             <span>24/11 Robert Road, New York, USA</span>
           </div>
         </div>
 
+        {/* Social Links */}
         <div className="flex items-center space-x-4 text-md">
           <Link
             href="https://facebook.com"
@@ -67,10 +71,7 @@ export function TopBar() {
             <span className="sr-only">YouTube</span>
           </Link>
         </div>
-
-
       </div>
     </div>
   )
 }
-

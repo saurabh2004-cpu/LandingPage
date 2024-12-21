@@ -36,13 +36,14 @@ const features = [
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto px-6 md:px-8 lg:px-40 py-24 bg-white rounded-tr-[68px] rounded-tl-[68px]">
+      <div className="container mx-auto px-6 md:px-12 lg:px-40 py-16 md:py-24 bg-white rounded-tr-[68px] rounded-tl-[68px]">
         <div className="relative mb-16">
+          {/* Heading Section */}
           <motion.p
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }} 
+            viewport={{ once: true }}
             className="text-gray-500 mb-4"
           >
             / Rehabilitation
@@ -52,29 +53,25 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#003049] max-w-3xl leading-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-serif text-[#003049] max-w-3xl leading-tight"
           >
             Excellence In Care And Rehabilitation
           </motion.h1>
 
+          {/* Button Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="absolute top-0 right-0"
+            className="mt-8"
           >
-            {/* <Button
-              className="bg-[#003049] hover:bg-[#00304980] text-white px-6 py-3 rounded-full text-base font-medium"
-            >
-              Make An Appointment →
-            </Button> */}
-
             <Button text="Make An Appointment" icon={<ArrowRight />} />
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {/* Features Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -84,7 +81,7 @@ export default function Home() {
                 duration: 0.5,
                 delay: 0.1 * index,
               }}
-              viewport={{ once: true }} 
+              viewport={{ once: true }}
             >
               <Card className="bg-[#003049] text-white h-full">
                 <CardContent className="p-6 flex flex-col items-center text-center">
@@ -99,7 +96,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* qualityTreatement */}
+      {/* Quality Treatment Section */}
       <QualityTreatment />
     </>
   )

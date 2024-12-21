@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { Features } from './Features';
 import Button from './Button';
 
-export function Main() {
+export function Hero() {
   return (
     <section className="relative w-full pb-20 justify-center bg-black">
       {/* Background Video */}
@@ -35,10 +35,10 @@ export function Main() {
             initial={{ x: 100, opacity: 0 }} // Start off-screen to the right
             animate={{ x: 0, opacity: 1 }} // Slide into position with opacity
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="text-white font-serif text-center lg:text-left"
+            className="text-white font-serif text-center text-left"
           >
-            <span className="block text-4xl lg:text-6xl mb-2">Destination For</span>
-            <span className="block text-4xl lg:text-6xl">Relief &amp; Wellness</span>
+            <span className="block text-4xl lg:text-6xl mb-2 lg:text-left">Destination For</span>
+            <span className="block text-4xl lg:text-6xl lg:text-left">Relief &amp; Wellness</span>
           </motion.h1>
 
           {/* Paragraph with Bottom-to-Up Animation */}
@@ -46,7 +46,7 @@ export function Main() {
             initial={{ y: 50, opacity: 0 }} // Start off-screen to the bottom
             animate={{ y: 0, opacity: 1 }} // Slide up into position
             transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-            className="text-gray-200 text-center lg:text-left text-base lg:text-lg mt-6 mb-8 max-w-xl mx-auto lg:mx-0"
+            className="text-gray-200 md:text-center lg:text-left text-left text-base lg:text-lg mt-6 mb-8 max-w-xl mx-auto lg:mx-0"
           >
             It is a long established fact that a reader will be distracted by the
             readable content of a page when looking at layout. The point of using lorem
@@ -58,7 +58,7 @@ export function Main() {
             initial={{ y: 50, opacity: 0 }} // Start off-screen to the bottom
             animate={{ y: 0, opacity: 1 }} // Slide up into position
             transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
-            className="flex flex-wrap justify-center lg:justify-start gap-4"
+            className="flex flex-wrap  lg:justify-start gap-4"
           >
             
             <Button text="Explore Services" icon={<ArrowRight className="h-5 w-5" />} />

@@ -7,8 +7,8 @@ export const QualityTreatment = () => {
     return (
         <div className="w-full flex flex-wrap bg-white">
             {/* Left Section */}
-            <div className="w-full lg:w-1/2 p-12 lg:p-24 bg-[#e5eaec] flex items-center relative">
-                <div className="w-full max-w-2xl">
+            <div className="w-full lg:w-1/2 p-6 sm:p-12 lg:p-24 bg-[#e5eaec] flex items-center relative rounded-tl-[50px]">
+                <div className="w-full max-w-2xl mb-16">
                     {/* Subtitle */}
                     <motion.p
                         initial={{ x: 100, opacity: 0 }}
@@ -26,7 +26,7 @@ export const QualityTreatment = () => {
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="text-[2.5rem] md:text-[3.5rem] font-medium text-[#0B2C3D] leading-[1.2] mb-8"
+                        className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-medium text-[#0B2C3D] leading-[1.2] mb-8 break-words"
                     >
                         We Proudly Give <br /> Quality Treatment
                     </motion.h1>
@@ -37,7 +37,7 @@ export const QualityTreatment = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-gray-600 mb-10 text-lg"
+                        className="text-gray-600 mb-10 text-base sm:text-lg"
                     >
                         We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are designed to provide prompt and effective care to help you manage.
                     </motion.p>
@@ -59,7 +59,7 @@ export const QualityTreatment = () => {
                                 <span className="text-blue-600">
                                     <Check className="w-5 h-5" />
                                 </span>
-                                <span className="text-[#0B2C3D] text-lg">{item}</span>
+                                <span className="text-[#0B2C3D] text-base sm:text-lg">{item}</span>
                             </li>
                         ))}
                     </motion.ul>
@@ -71,7 +71,7 @@ export const QualityTreatment = () => {
                         transition={{ duration: 0.6, delay: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <button className="bg-[#0B2C3D] text-white px-8 py-4 rounded-full hover:bg-blue-900 transition-all flex items-center gap-2 text-lg font-medium">
+                        <button className="bg-[#0B2C3D] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-blue-900 transition-all flex items-center gap-2 text-base sm:text-lg font-medium">
                             Make An Appointment
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -93,13 +93,10 @@ export const QualityTreatment = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-full lg:w-1/2 relative overflow-hidden flex min-h-[600px]">
-                {/* Decorative Overlay */}
-                <div className="bg-[#e5eaec] w-1/4 h-[91.7%] z-50 rounded-br-[68px] relative left-[77px] ml-[-78px]"></div>
-
-                {/* Image */}
+            <div className="w-full lg:w-1/2 relative overflow-hidden lg:flex hidden justify-center items-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] rounded-tr-[50px]">
+                <div className="bg-[#e5eaec] w-1/4 h-[99.7%] z-50 rounded-br-[68px] relative top-[-61px] left-[77px] ml-[-78px]"></div>
                 <motion.img
-                    src="https://ecc301c3-cdn.agilitycms.cloud/Attachments/NewItems/Physiotherapy%20Services%201800x1800_20220503172109_0.jpg"
+                    src="/images/11.jpg"
                     alt="Physiotherapy"
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.1, opacity: 0 }}
@@ -108,6 +105,7 @@ export const QualityTreatment = () => {
                     viewport={{ once: true }}
                 />
             </div>
+
         </div>
     )
 }

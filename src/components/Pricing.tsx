@@ -28,7 +28,7 @@ export const Pricing = () => {
     return (
         <div
             ref={ref}
-            className="h-full w-full relative p-8 pt-24 lg:p-16 overflow-hidden bg-cover bg-center bg-no-repeat rounded-t-[68px]"
+            className="h-full w-full relative p-8 pt-24 lg:p-16 overflow-hidden bg-cover bg-center bg-no-repeat rounded-t-[50px]"
             style={{
                 backgroundImage: 'url("https://aica.com/wp-content/uploads/2024/09/How-Physiotherapy-Can-Help-You-AICA-Orthopedics-scaled-1.jpg")'
             }}
@@ -38,13 +38,13 @@ export const Pricing = () => {
 
             {/* Main Content */}
             <motion.div
-                className="max-w-7xl mx-auto relative z-10 flex "
+                className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row mb-16"
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
                 {/* Header Section */}
-                <motion.div className="mb-16 text-center" animate={isInView ? "visible" : "hidden"} >
+                <motion.div className="mb-16 text-center lg:text-left lg:w-1/2" animate={isInView ? "visible" : "hidden"}>
                     <motion.p
                         initial={{ x: 100, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
@@ -65,7 +65,7 @@ export const Pricing = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-gray-300 max-w-2xl mx-auto"
+                        className="text-gray-300 max-w-2xl mx-auto lg:mx-0"
                     >
                         We offer a range of flexible pricing options tailored to meet your physiotherapy needs. Whether you're starting with an initial assessment or seeking long-term care, our plans provide excellent value with expert care.
                     </motion.p>
@@ -78,7 +78,7 @@ export const Pricing = () => {
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-full border border-white/20 transition-colors flex items-center gap-2 mx-auto"
+                            className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-full border border-white/20 transition-colors flex items-center gap-2 mx-auto lg:mx-0"
                         >
                             Make An Appointment
                             <ArrowRight className="w-4 h-4" />
@@ -91,7 +91,7 @@ export const Pricing = () => {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="grid md:grid-cols-2 gap-8 ml-4 "
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8"
                 >
                     {/* Starter Plan */}
                     <motion.div
@@ -127,7 +127,7 @@ export const Pricing = () => {
                                 transition={{ duration: 0.6 }}
                                 className="text-white/80 text-sm mb-8"
                             >
-                                This plan is perfect for individuals seeking and pain, improve injuries.
+                                This plan is perfect for individuals seeking treatment for pain and injuries.
                             </motion.p>
 
                             <motion.ul
@@ -143,7 +143,7 @@ export const Pricing = () => {
                                     'Post-Natal Physiotherapy',
                                     'Knee Pain Treatment',
                                     'Geriatric Physiotherapy'
-                                ].map((feature, index) => (
+                                ].map((feature) => (
                                     <motion.li
                                         key={feature}
                                         animate={isInView ? "visible" : "hidden"}
@@ -161,8 +161,7 @@ export const Pricing = () => {
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-full 
-                                          backdrop-blur-sm flex items-center justify-between transition-colors"
+                                className="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-full backdrop-blur-sm flex items-center justify-between transition-colors"
                             >
                                 <span className="font-medium">Choose Plan</span>
                                 <ArrowRight className="w-5 h-5" />
@@ -200,7 +199,7 @@ export const Pricing = () => {
                                 transition={{ duration: 0.6 }}
                                 className="text-white/80 text-sm mb-8"
                             >
-                                Our Basic Physiotherapy Plan for clients looking treatment.
+                                Our Basic Physiotherapy Plan for clients seeking treatment.
                             </motion.p>
 
                             <motion.ul
@@ -216,7 +215,7 @@ export const Pricing = () => {
                                     'Fracture Rehabilitation',
                                     'Pelvic Floor Physiotherapy',
                                     'Neck Pain Treatment'
-                                ].map((feature, index) => (
+                                ].map((feature) => (
                                     <motion.li
                                         key={feature}
                                         animate={isInView ? "visible" : "hidden"}
@@ -234,8 +233,7 @@ export const Pricing = () => {
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-full 
-                                          backdrop-blur-sm flex items-center justify-between transition-colors"
+                                className="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-full backdrop-blur-sm flex items-center justify-between transition-colors"
                             >
                                 <span className="font-medium">Choose Plan</span>
                                 <ArrowRight className="w-5 h-5" />
@@ -247,4 +245,3 @@ export const Pricing = () => {
         </div>
     )
 }
-
