@@ -64,7 +64,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-8"
+            className="mt-8 flex relative md:justify-center lg:justify-end lg:bottom-40"
           >
             <Button text="Make An Appointment" icon={<ArrowRight />} />
           </motion.div>

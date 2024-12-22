@@ -88,7 +88,7 @@ export const Services = () => {
           </motion.p>
 
           {/* Call to Action Button */}
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex justify-center lg:justify-end relative lg:bottom-40">
             <Button text="Make An Appointment" icon={<ArrowRight className="w-5 h-5" />} />
           </div>
 

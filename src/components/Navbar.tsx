@@ -26,10 +26,11 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4 pr-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
-            <Store className="h-4 w-4" />
-          </div>
-          <span className="text-xl font-semibold">Carefirst</span>
+        <img
+              src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
+              alt="Carefirst Logo"
+              className="h-10 sm:h-12"
+            />
         </Link>
 
         {/* Main Navigation (Desktop) */}
@@ -71,10 +72,11 @@ const Navbar = () => {
         <div className="bg-black bg-opacity-90 lg:hidden fixed top-0 left-0 h-full w-[80%] z-40 text-white">
           <div className="flex justify-between items-center px-6 py-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
-                <Store className="h-4 w-4" />
-              </div>
-              <span className="text-xl font-semibold">Carefirst</span>
+            <img
+              src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
+              alt="Carefirst Logo"
+              className="h-10 sm:h-12"
+            />
             </Link>
             <button onClick={toggleMobileMenu} className="text-white">
               <X className="h-6 w-6" />

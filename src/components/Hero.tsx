@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ x: 100, opacity: 0 }} // Start off-screen to the right
             animate={{ x: 0, opacity: 1 }} // Slide into position with opacity
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="text-white font-serif text-center text-left"
+            className="text-white font-serif  text-left"
           >
             <span className="block text-4xl lg:text-6xl mb-2 lg:text-left">Destination For</span>
             <span className="block text-4xl lg:text-6xl lg:text-left">Relief &amp; Wellness</span>
