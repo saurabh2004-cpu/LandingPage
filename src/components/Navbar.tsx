@@ -26,18 +26,35 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4 pr-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-        <img
-              src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
-              alt="Carefirst Logo"
-              className="h-10 sm:h-12"
-            />
+          <img
+            src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
+            alt="Carefirst Logo"
+            className="h-10 sm:h-12"
+          />
         </Link>
 
         {/* Main Navigation (Desktop) */}
         <div className="hidden lg:flex items-center space-x-8">
-          <Link href="/" className="hover:text-gray-200 transition-colors text-sm font-semibold">
-            Home
-          </Link>
+          {/* Home Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-sm font-semibold">
+              <span>Home</span>
+              <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2">
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Home - Image
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Home - Video
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Home - Slider
+                </Link>
+              </div>
+            </div>
+          </div>
 
           <Link href="/about" className="hover:text-gray-200 transition-colors text-sm font-semibold">
             About Us
@@ -47,9 +64,35 @@ const Navbar = () => {
             Services
           </Link>
 
-          <Link href="/pages" className="hover:text-gray-200 transition-colors text-sm font-semibold">
-            Pages
-          </Link>
+          {/* Pages Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-sm font-semibold">
+              <span>Pages</span>
+              <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2">
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Service Details
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Our Blog
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Blog Details
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Our Team
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  FAQ's
+                </Link>
+                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                  Book Appointment
+                </Link>
+              </div>
+            </div>
+          </div>
 
           <Link href="/contact" className="hover:text-gray-200 transition-colors text-sm font-semibold">
             Contact Us
@@ -72,11 +115,11 @@ const Navbar = () => {
         <div className="bg-black bg-opacity-90 lg:hidden fixed top-0 left-0 h-full w-[80%] z-40 text-white">
           <div className="flex justify-between items-center px-6 py-4">
             <Link href="/" className="flex items-center space-x-2">
-            <img
-              src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
-              alt="Carefirst Logo"
-              className="h-10 sm:h-12"
-            />
+              <img
+                src="https://demo.awaikenthemes.com/html-preview/carefirst/images/logo.svg"
+                alt="Carefirst Logo"
+                className="h-10 sm:h-12"
+              />
             </Link>
             <button onClick={toggleMobileMenu} className="text-white">
               <X className="h-6 w-6" />
@@ -106,7 +149,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link href="/" className="text-sm hover:text-gray-300">
-                      Home-Sidebar
+                      Home-Slider
                     </Link>
                   </li>
                 </ul>
@@ -186,3 +229,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
