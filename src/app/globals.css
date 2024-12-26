@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* for map */
+@import "leaflet/dist/leaflet.css";  
+
+
 /* Animation Keyframes */
 @keyframes slideInLeft {
   from {

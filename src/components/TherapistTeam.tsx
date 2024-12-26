@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
+'use client'
 import { Facebook, Youtube, Instagram, Twitter, ArrowRight } from 'lucide-react';
 import Button from './Button';
+import { motion } from 'framer-motion';
+
 
 const team = [
     {
@@ -25,37 +27,50 @@ const team = [
     }
 ];
 
-export const TherapistTeam = () => {
+interface Props {
+    therapists?: any[];
+    title?: string;
+    section?: string
+}
+
+export const TherapistTeam = ({ therapists = team, title, section }: Props) => {
     return (
         <div className="w-full bg-white px-4 md:px-16 lg:px-40 py-16 relative rounded-t-[50px] top-[-47px] z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
-                <div>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        className="text-blue-600 mb-2"
-                    >
-                        / Therapist Team
-                    </motion.p>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        className="text-4xl lg:text-5xl text-[#0B2C3D] font-medium max-w-2xl"
-                    >
-                        Our dedicated & experienced therapist team
-                    </motion.h2>
-                </div>
-                
-                <Button text="View All Team" icon={<ArrowRight className="w-4 h-4" />} />
+                {title && section &&
+                    <>
+                        <div>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true, amount: 0.5 }}
+                                className="text-blue-600 mb-2"
+                            >
+                                / {section}
+                            </motion.p>
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                viewport={{ once: true, amount: 0.5 }}
+                                className="text-4xl lg:text-5xl text-[#0B2C3D] font-medium max-w-2xl"
+                            >
+                                {title}
+                            </motion.h2>
+                        </div>
+
+                        <div className='mt-6'>
+                            <Button text="View All Team" icon={<ArrowRight className="w-4 h-4 " />} />
+                        </div>
+                    </>
+                }
+
             </div>
 
             {/* Team Member Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 p-4 lg:p-16">
-                {team.map((member, index) => (
+                {therapists.map((member, index) => (
                     <motion.div
                         key={member.name}
                         initial={{ opacity: 0, y: 50 }}

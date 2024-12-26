@@ -5,10 +5,12 @@ import { User, ShoppingCart, Store, Phone, Menu, X, ChevronDown } from 'lucide-r
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState<{ [key: string]: boolean }>({});
+  const router = useRouter()
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -37,64 +39,73 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center space-x-8">
           {/* Home Dropdown */}
           <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-sm font-semibold">
+            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-md font-semibold" onClick={()=>router.push('/')}>
               <span>Home</span>
               <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="py-2">
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors ">
                   Home - Image
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Home - Video
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Home - Slider
                 </Link>
               </div>
             </div>
           </div>
 
-          <Link href="/about" className="hover:text-gray-200 transition-colors text-sm font-semibold">
+          <Link href="/about" className="hover:text-gray-200 transition-colors text-md font-semibold">
             About Us
           </Link>
 
-          <Link href="/services" className="hover:text-gray-200 transition-colors text-sm font-semibold">
+          <Link href="/services" className="hover:text-gray-200 transition-colors text-md font-semibold">
             Services
           </Link>
 
           {/* Pages Dropdown */}
           <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-sm font-semibold">
+            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-md font-semibold">
               <span>Pages</span>
               <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B2C3D] rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="py-2">
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/service-details" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Service Details
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/blogs" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Our Blog
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/blog-details" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Blog Details
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/our-team" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Our Team
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/team-details" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
+                  Team Details
+                </Link>
+                <Link href="/video-testimonials" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
+                  Video Testimonials
+                </Link>
+                <Link href="/faq" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   FAQ's
                 </Link>
-                <Link href="/" className="block px-4 py-2 text-sm hover:bg-white/10 transition-colors">
+                <Link href="/book-appointment" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Book Appointment
+                </Link>
+                <Link href="/404" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
+                  404text-md bold
                 </Link>
               </div>
             </div>
           </div>
 
-          <Link href="/contact" className="hover:text-gray-200 transition-colors text-sm font-semibold">
+          <Link href="/contact" className="hover:text-gray-200 transition-colors text-md font-semibold">
             Contact Us
           </Link>
         </div>
@@ -130,7 +141,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => toggleSubmenu('home')}
-                className="flex items-center justify-between w-full text-sm font-semibold hover:text-gray-300"
+                className="flex items-center justify-between w-full text-md font-semibold hover:text-gray-300"
               >
                 Home
                 <ChevronDown className={`h-4 w-4 transition-transform ${submenuOpen.home ? 'rotate-180' : ''}`} />
@@ -138,17 +149,17 @@ const Navbar = () => {
               {submenuOpen.home && (
                 <ul className="mt-2 ml-4 space-y-2">
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Home-Image
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Home-Video
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Home-Slider
                     </Link>
                   </li>
@@ -158,14 +169,14 @@ const Navbar = () => {
 
             {/* About Us */}
             <li>
-              <Link href="/about" className="text-sm font-semibold hover:text-gray-300">
+              <Link href="/AboutUs" className="text-md font-semibold hover:text-gray-300">
                 About Us
               </Link>
             </li>
 
             {/* Services */}
             <li>
-              <Link href="/services" className="text-sm font-semibold hover:text-gray-300">
+              <Link href="/services" className="text-md font-semibold hover:text-gray-300">
                 Services
               </Link>
             </li>
@@ -174,7 +185,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => toggleSubmenu('pages')}
-                className="flex items-center justify-between w-full text-sm font-semibold hover:text-gray-300"
+                className="flex items-center justify-between w-full text-md font-semibold hover:text-gray-300"
               >
                 Pages
                 <ChevronDown className={`h-4 w-4 transition-transform ${submenuOpen.pages ? 'rotate-180' : ''}`} />
@@ -182,32 +193,32 @@ const Navbar = () => {
               {submenuOpen.pages && (
                 <ul className="mt-2 ml-4 space-y-2">
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Service Details
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Our Blog
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Blog Details
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Our Team
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       FAQ's
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-sm hover:text-gray-300">
+                    <Link href="/" className="text-md hover:text-gray-300">
                       Book Appointment
                     </Link>
                   </li>
@@ -217,7 +228,7 @@ const Navbar = () => {
 
             {/* Contact Us */}
             <li>
-              <Link href="/contact" className="text-sm font-semibold hover:text-gray-300">
+              <Link href="/ContactUs" className="text-md font-semibold hover:text-gray-300">
                 Contact Us
               </Link>
             </li>

@@ -33,10 +33,10 @@ const features = [
   },
 ]
 
-export default function Home() {
+export default function Rehabilitation({className}: {className?:string}) {
   return (
     <>
-      <div className="container mx-auto px-6 md:px-12 lg:px-40 py-16 md:py-24 bg-white rounded-tr-[68px] rounded-tl-[68px]">
+      <div className="container mx-auto px-6 md:px-12 lg:px-40 py-12 md:py-24 bg-white rounded-tr-[68px] rounded-tl-[68px]">
         <div className="relative mb-16">
           {/* Heading Section */}
           <motion.p
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 ">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -83,7 +83,7 @@ export default function Home() {
               }}
               viewport={{ once: true }}
             >
-              <Card className="bg-[#003049] text-white h-full">
+              <Card className="bg-[#023047] text-white h-full ">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <feature.icon className="h-8 w-8 mb-4" strokeWidth={1} />
                   <h3 className="font-medium leading-tight text-sm">
@@ -97,7 +97,9 @@ export default function Home() {
       </div>
 
       {/* Quality Treatment Section */}
+      <section className={`${className}`}>
       <QualityTreatment />
+      </section>
     </>
   )
 }

@@ -53,7 +53,7 @@ const services: Service[] = [
 
 export const Services = () => {
   return (
-    <div>
+    <>
       <section className="relative overflow-hidden px-5 md:px-12 lg:px-36 py-16 bg-[#e5eaec] rounded-t-[50px]">
         <div className="container mx-auto">
           {/* Header Section */}
@@ -114,7 +114,7 @@ export const Services = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="relative p-6 min-h-[320px] flex flex-col">
+                  <div className="relative p-6 min-h-[320px] flex flex-col z-50 justify-between">
                     {/* Icon */}
                     <div className="ml-4 w-14 h-16 relative bottom-6 z-10 rounded-br-[8px] rounded-bl-[8px] bg-white/10 flex items-center justify-center transition-colors group-hover:bg-blue-600">
                       <service.icon className="w-6 h-6 text-white" />
@@ -124,7 +124,7 @@ export const Services = () => {
                     <h3 className="text-2xl font-semibold text-white mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-white/80 mb-4">
+                    <p className="text-white/80 mb-4 ">
                       {service.description}
                     </p>
 
@@ -157,6 +157,6 @@ export const Services = () => {
           </Link>
         </motion.p>
       </div>
-    </div>
+    </>
   )
 }

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-export default function Button({ text, icon ,className }: { text: string; icon: React.ReactNode,className?:string }) {
+export default function Button({ text, icon ,className='' }: { text: string; icon: React.ReactNode,className?:string }) {
   return (
     <motion.button
       className={` group relative flex items-center overflow-hidden rounded-full bg-[#003144] text-white hover:text-[#003144] border-2 border-[#003144] ${className}`}

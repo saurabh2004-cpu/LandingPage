@@ -96,24 +96,45 @@ export const HowItWorks = () => {
             </div>
 
             {/* Bottom Section - Image Grid */}
-            <div className="w-full relative overflow-hidden mt-12">
-                <div className="grid grid-cols-2 gap-2 p-6 lg:p-24">
-                    {images.map((image, index) => (
-                        <motion.img
-                            key={index}
-                            src={image}
-                            alt={`Treatment ${index + 1}`}
-                            className="w-full h-full object-cover aspect-video rounded-lg"
-                            initial={{ x: -100, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            viewport={{ once: true, amount: 0.5 }}
-                            transition={{ duration: 0.8 }}
+            <div className="w-full h-full relative overflow-hidden h-full sm:h-[620px] rounded-xl">
+                <div className=" grid grid-cols-12 p-6 lg:px-24 h-full rounded-xl">
+                    {/* Left Column */}
+                    <div className="grid col-span-4 grid-rows-2 ">
+                        <img
+                            src="/images/1.jpg"
+                            alt="Treatment 1"
+                            className="w-full h-[48%] lg:h-full object-cover rounded-tl-xl"
                         />
-                    ))}
+                        <img
+                            src="/images/2.jpg"
+                            alt="Treatment 2"
+                            className="w-full h-[48%] lg:h-full object-cover rounded-bl-xl"
+                        />
+                    </div>
+
+                    {/* Right Column */}
+                    <div className="grid  col-span-8">
+                        <div className="grid grid-cols ">
+                            <img
+                                src="/images/3.jpg"
+                                alt="Treatment 3"
+                                className="w-full h-full object-cover rounded-tr-xl"
+                            />
+                            
+                        </div>
+                        <img
+                            src="/images/5.jpg"
+                            alt="Treatment 5"
+                            className="w-full h-full object-cover rounded-br-xl"
+                        />
+                    </div>
                 </div>
                 {/* Overlay to create depth effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent pointer-events-none" />
             </div>
+
+
+
         </div>
     )
 }
