@@ -16,42 +16,42 @@ const Blogs = () => {
             title: "The Benefits of Physiotherapy for Injury Recovery",
             date: "September 15, 2024",
             tag: "Manual Therapy",
-            image: "/images/18.jpg",
+            image: "/images/2.jpg",
             href: "/blog/benefits-physiotherapy"
         },
         {
             title: "How to Speed Up Your Post-Surgery Recovery",
             date: "September 12, 2024",
             tag: "Chronic Pain",
-            image: "/images/18.jpg",
+            image: "/images/4.jpg",
             href: "/blog/post-surgery-recovery"
         },
         {
             title: "The Role of Physiotherapy in Managing Chronic Pain",
             date: "September 9, 2024",
             tag: "Hand Therapy",
-            image: "/images/18.jpg",
+            image: "/images/5.jpg",
             href: "/blog/managing-chronic-pain"
         },
         {
             title: "5 Warning Signs That You Need to See a Physiotherapist",
             date: "September 5, 2024",
             tag: "Sports Therapy",
-            image: "/images/18.jpg",
+            image: "/images/6.jpg",
             href: "/blog/warning-signs"
         },
         {
             title: "How Shockwave Therapy Can Relieve Tendon Pain",
             date: "September 3, 2024",
             tag: "Orthopedic Therapy",
-            image: "/images/18.jpg",
+            image: "/images/12.jpg",
             href: "/blog/shockwave-therapy"
         },
         {
             title: "Dry Needling: How It Works and Who Can Benefit",
             date: "September 1, 2024",
             tag: "Cupping Therapy",
-            image: "/images/18.jpg",
+            image: "/images/13.jpg",
             href: "/blog/dry-needling"
         }
     ]
@@ -59,7 +59,7 @@ const Blogs = () => {
     return (
         <>
             {/* /// Hero Section */}
-            <HeroSection image={'/images/1.jpg'} title={'Blogs'} />
+            <HeroSection image='/images/servicesHeroImage.jpg' title={'Blogs'} />
 
             {/* cards section */}
             <div className="container mx-auto p-4 lg:p-32 relative bg-white rounded-[50px] top-[-50px]">

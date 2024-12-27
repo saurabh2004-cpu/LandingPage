@@ -98,7 +98,7 @@ const Navbar = () => {
                   Book Appointment
                 </Link>
                 <Link href="/404" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
-                  404text-md bold
+                  404
                 </Link>
               </div>
             </div>

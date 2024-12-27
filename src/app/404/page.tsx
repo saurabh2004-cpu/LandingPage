@@ -10,7 +10,7 @@ import { ArrowRight } from 'lucide-react'
 const ErrorPage = () => {
   return (
     <>
-      <HeroSection image='/images/1.jpg' title='404 Error' />
+      <HeroSection image='/images/servicesHeroImage.jpg' title='404 Error' />
 
       {/* error section */}
       <section className="flex flex-col items-center justify-center min-h-screen bg-[#f8f9fa] py-8 px-4 overflow-hidden  rounded-t-[50px] relative top-[-50px]">

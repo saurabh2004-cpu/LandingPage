@@ -51,7 +51,7 @@ const BookApointment = () => {
 
     return (
         <>
-            <HeroSection image='/images/1.jpg' title='Team Details' />
+            <HeroSection image='/images/servicesHeroImage.jpg' title='Book Appointment' />
 
             {/* appointment section */}
             <div className="container mx-auto px-4 py-16 max-w-4xl">

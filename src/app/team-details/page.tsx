@@ -8,7 +8,7 @@ import { HeroSection } from '@/components/HeroSection'
 const TeamDetails = () => {
     return (
         <>
-            <HeroSection image='/images/1.jpg' title='Team Details' />
+            <HeroSection image='/images/servicesHeroImage.jpg' title='Team Details' />
 
             {/* details  */}
             <section className=' bg-white relative rounded-[50px] top-[-50px]'>
@@ -65,7 +65,7 @@ const TeamDetails = () => {
                                     viewport={{ once: true }}
                                     className="sm:text-5xl text-3xl font-serif text-[#003049]"
                                 >
-                                    Dr. Emily Brown
+                                    Dr. Michael Carter
                                 </motion.h1>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}

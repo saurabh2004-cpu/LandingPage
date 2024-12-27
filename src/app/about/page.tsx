@@ -1,6 +1,6 @@
 'use client'
 import Button from '@/components/Button'
-import {  ArrowRight, ArrowUpRight, Award, Brain, Check, Footprints, MonitorSmartphone, ThumbsUp, Users } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Award, Brain, Check, Footprints, MonitorSmartphone, ThumbsUp, Users } from 'lucide-react'
 import { Activity, SpadeIcon as Spine, Bone, Briefcase, Home, Heart } from 'lucide-react'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
@@ -58,7 +58,7 @@ const About = () => {
     {
       title: "Individual Therapy",
       description: "Individual therapy offers tailored treatment and focused attention to.",
-      image: "/images/7.jpg",
+      image: "/images/aboutUsIndividualTherapy.jpg",
       features: [
         "Personalized Treatment Plans",
         "Specialized Techniques",
@@ -68,7 +68,7 @@ const About = () => {
     {
       title: "Family Therapy",
       description: "Family therapy focuses  on improving communication, resolving conflicts.",
-      image: "/images/7.jpg",
+      image: "/images/aboutUsFamilyTherapy.jpg",
       features: [
         "Common Issues Addressed",
         "Purpose and Goals",
@@ -78,7 +78,7 @@ const About = () => {
     {
       title: "Manual Therapy",
       description: "Manual therapy involves a range of hands-on techniques used by therapists.",
-      image: "/images/7.jpg",
+      image: "/images/aboutUsManualTherapy.jpg",
       features: [
         "Enhanced Muscle Function",
         "Increased Range of Motion",
@@ -167,7 +167,7 @@ const About = () => {
   return (
     <>
       {/* //hero section */}
-      <HeroSection image={'/images/1.jpg'} title={'About Us'} />
+      <HeroSection image='/images/servicesHeroImage.jpg' title='Services' />
 
       {/* //about us section */}
       <section className="w-full min-h-screen bg-white overflow-hidden lg:px-40 rounded-t-[50px] top-[-50px] z-10 relative">
@@ -388,14 +388,20 @@ const About = () => {
               >
                 <Card className="overflow-hidden group cursor-pointer h-full relative">
                   <div className="relative h-[400px] md:h-[450px] lg:h-[500px]">
+                    {/* Image */}
                     <img
                       src={therapy.image}
                       alt={therapy.title}
                       className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10" />
+
+                    {/* Black Shadow Overlay */}
+                    <div className="absolute inset-0 bg-black opacity-70 z-10" />
+
+                    {/* Content on Top of Overlay */}
                     <div className="absolute inset-0 z-20 p-6 flex flex-col">
                       <div className="flex items-start justify-between mb-4">
+                        {/* Title */}
                         <motion.h3
                           className="text-2xl font-medium text-white"
                           whileHover={{ x: 5 }}
@@ -403,6 +409,7 @@ const About = () => {
                         >
                           {therapy.title}
                         </motion.h3>
+                        {/* Icon */}
                         <motion.div
                           whileHover={{ rotate: 0 }}
                           transition={{ type: "spring", stiffness: 300 }}
@@ -410,8 +417,12 @@ const About = () => {
                           <ArrowUpRight className="text-white opacity-75 group-hover:opacity-100 transition-opacity transform rotate-[45deg] group-hover:rotate-0" />
                         </motion.div>
                       </div>
+
+                      {/* Description */}
                       <p className="text-white/90 mb-auto">{therapy.description}</p>
-                      <ul className="space-y-2 bg-black/30 p-4 rounded-2xl">
+
+                      {/* Features */}
+                      <ul className="space-y-2 bg-white/10 p-4 rounded-2xl">
                         {therapy.features.map((feature) => (
                           <motion.li
                             key={feature}
@@ -427,6 +438,7 @@ const About = () => {
                     </div>
                   </div>
                 </Card>
+
               </motion.div>
             ))}
           </div>
@@ -499,7 +511,7 @@ const About = () => {
                 className="relative w-[80%] h-[70%] sm:h-[80%] rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
-                  src="/images/18.jpg"
+                  src="/images/aboutUsTherapyProcessImage.jpg"
                   alt="Therapy session"
                   className="w-full h-full object-cover"
                 />
@@ -855,7 +867,7 @@ const About = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-10" />
           <img
-            src="/images/13.jpg"
+            src="/images/aboutUsBokkAppointmentImage.jpg"
             alt="Physiotherapy session"
             className="w-full h-full object-cover"
           />

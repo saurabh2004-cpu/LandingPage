@@ -72,7 +72,7 @@ const Services = () => {
     return (
         <>
             {/* //hero section */}
-           <HeroSection image='/images/9.jpg' title='Services' />
+           <HeroSection image='/images/servicesHeroImage.jpg' title='Services' />
 
             {/* process section */}
             <section className="relative bg-[#e5eaec] py-16 px-6 lg:py-24 lg:px-36 rounded-t-[50px] top-[-50px] mb-[-92px]">
@@ -108,7 +108,7 @@ const Services = () => {
                         className="relative w-full h-full flex justify-center rounded-2xl overflow-hidden"
                     >
                         <img
-                            src="/images/9.jpg"
+                            src="/images/servicesProcessImage.jpg"
                             alt="Physiotherapy Session"
                             className="rounded-lg shadow-lg w-full max-w-lg object-cover"
                         />

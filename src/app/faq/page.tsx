@@ -32,7 +32,7 @@ const Faqs = () => {
 
   return (
     <>
-      <HeroSection image='/images/1.jpg' title="FAQ's" />
+      <HeroSection image='/images/servicesHeroImage.jpg' title="FAQ's" />
 
       {/* faqs */}
       <section className="container  mx-auto px-6 md:px-12 lg:px-24 py-16 flex flex-col lg:flex-row items-center gap-12">
@@ -46,7 +46,7 @@ const Faqs = () => {
             className="relative w-3/4  aspect-[3/4] bg-[#e5eaec] rounded-3xl shadow-lg overflow-hidden"
           >
             <motion.img
-              src="/images/11.jpg"
+              src="/images/faqImage.jpg"
               alt="Physiotherapy"
               className="w-full h-full object-cover"
               initial={{ scale: 1.1 }}

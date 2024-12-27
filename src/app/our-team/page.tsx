@@ -28,28 +28,28 @@ const OurTeam = () => {
     {
       name: 'Dr. Michael Carter',
       role: 'Sports Rehabilitation Specialist',
-      image: '/images/19.jpg'
+      image: '/images/15.jpg'
     },
     {
       name: 'Dr. Sophia Davis',
       role: 'Occupational Therapist',
-      image: '/images/20.jpg'
+      image: '/images/doctorImage1.jpeg'
     },
     {
       name: 'Dr. Andrew Moore',
       role: 'Geriatric Physiotherapist',
-      image: '/images/21.jpg'
+      image: '/images/17.jpg'
     },
     {
       name: 'Dr. Olivia Garcia',
       role: 'Cardiopulmonary Therapist',
-      image: '/images/21.jpg'
+      image: '/images/18.jpg'
     }
   ];
 
   return (
     <>
-      <HeroSection image='/images/1.jpg' title='Our Team' />
+      <HeroSection image='/images/servicesHeroImage.jpg' title='Our Team' />
 
       {/* team */}
       <TherapistTeam therapists={team} />

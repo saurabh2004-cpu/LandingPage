@@ -1,6 +1,6 @@
 'use client'
 import Button from '@/components/Button'
-import React, { useRef, } from 'react'
+import React, { useRef, useState, } from 'react'
 import { motion, useInView } from 'framer-motion';
 // import { MapContainer, TileLayer } from "react-leaflet";
 import { HeroSection } from '@/components/HeroSection'
@@ -52,10 +52,14 @@ const Contact = () => {
         }
     ]
 
+
+
+
+
     return (
         <>
             {/* //hero section */}
-            <HeroSection image={'/images/12.jpg'} title='Contact Us' />
+            <HeroSection image='/images/servicesHeroImage.jpg' title='Contact Us' />
 
             {/*form section */}
             <section className="w-full py-16 px-6 lg:py-24 lg:px-24 rounded-t-[50px] relative bg-white top-[-50px]">

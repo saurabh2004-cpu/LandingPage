@@ -12,37 +12,37 @@ const VideoTestimonials = () => {
     const videos = [
         {
             id: 1,
-            image: '/images/17.jpg',
+            image: '/images/2.jpg',
             title: 'Physical Therapy Session',
             isVideo: true,
         },
         {
             id: 2,
-            image: '/images/17.jpg',
+            image: '/images/3.jpg',
             title: 'Joint Mobilization Techniques',
             isVideo: true,
         },
         {
             id: 3,
-            image: '/images/17.jpg',
+            image: '/images/4.jpg',
             title: 'Relaxation Therapy',
             isVideo: true,
         },
         {
             id: 4,
-            image: '/images/17.jpg',
+            image: '/images/6.jpg',
             title: 'Range of Motion Exercises',
             isVideo: true,
         },
         {
             id: 5,
-            image: '/images/17.jpg',
+            image: '/images/7.jpg',
             title: 'Manual Therapy Techniques',
             isVideo: true,
         },
         {
             id: 6,
-            image: '/images/17.jpg',
+            image: '/images/8.jpg',
             title: 'Neck Pain Treatment',
             isVideo: true,
         },
@@ -51,7 +51,7 @@ const VideoTestimonials = () => {
 
     return (
         <>
-            <HeroSection image='/images/1.jpg' title='Team Details' />
+            <HeroSection image='/images/servicesHeroImage.jpg' title='Video Testimonials' />
 
             {/* cards  */}
             <section className='container mx-auto px-6 md:px-12 lg:px-24 p-8 md:py-24 bg-white relative top-[-45px] rounded-t-[50px]'>

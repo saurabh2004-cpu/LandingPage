@@ -18,7 +18,7 @@ const BlogDetails = () => {
     return (
         <>
             {/* //hero section */}
-            <HeroSection  image={'/images/11.jpg'} title={'Blog Details'}/>
+            <HeroSection  image='/images/servicesHeroImage.jpg' title={'Blog Details'}/>
 
             {/* blog */}
             <section className='relative bg-white rounded-[50px] p-4 top-[-50px]'>
@@ -38,7 +38,7 @@ const BlogDetails = () => {
                         />
                         <div className="relative aspect-[16/9] md:aspect-[21/9]">
                             <Image
-                                src="/images/11.jpg"
+                                src="/images/BlogDetailsImage.jpg"
                                 alt="Therapeutic massage treatment"
                                 fill
                                 className="object-cover"

@@ -62,7 +62,7 @@ const ServiceDetails = () => {
     return (
         <>
             {/* //hero section */}
-            <HeroSection image={'/images/2.jpg'} title='Service Details' />
+            <HeroSection image='/images/servicesHeroImage.jpg' title='Services' />
 
             {/*  */}
             <section
@@ -164,7 +164,7 @@ const ServiceDetails = () => {
                             className="w-full rounded-xl overflow-hidden group"
                         >
                             <img
-                                src="/images/1.jpg"
+                                src="/images/serviceDetailsImage1.jpg"
                                 alt="Physiotherapy Hero"
                                 className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_30px_rgba(0,49,83,0.2)]"
                             />
@@ -226,7 +226,7 @@ const ServiceDetails = () => {
                                 className="w-full rounded-xl overflow-hidden"
                             >
                                 <img
-                                    src="/images/2.jpg"
+                                    src="/images/13.jpg"
                                     alt="Physiotherapy Session"
                                     className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                                 />
@@ -239,7 +239,7 @@ const ServiceDetails = () => {
                                 className="w-full rounded-xl overflow-hidden"
                             >
                                 <img
-                                    src="/images/3.jpg"
+                                    src="/images/8.jpg"
                                     alt="Physiotherapy Equipment"
                                     className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                                 />
