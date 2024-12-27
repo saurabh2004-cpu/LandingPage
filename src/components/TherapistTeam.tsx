@@ -27,8 +27,14 @@ const team = [
     }
 ];
 
+interface Therapist {
+    name: string;
+    role: string;
+    image: string;
+}
+
 interface Props {
-    therapists?: any[];
+    therapists?: Therapist[];
     title?: string;
     section?: string
 }

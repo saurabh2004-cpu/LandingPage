@@ -5,7 +5,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@radix-ui/react-accordion'
 
-const page = () => {
+const Faqs = () => {
   // faqs
   const faqs = [
     {
@@ -66,7 +66,7 @@ const page = () => {
               transition={{ duration: 0.5 }}
               className="text-blue-600 font-medium"
             >
-              / FAQ's
+              / FAQ&apos;s
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
@@ -77,7 +77,7 @@ const page = () => {
               Frequently Asked Questions
             </motion.h2>
             <p className="text-gray-600 mt-4">
-              Have questions? We've got answers! Find the most common inquiries about our services below.
+              Have questions? We&apos;ve got answers! Find the most common inquiries about our services below.
             </p>
           </div>
 
@@ -119,4 +119,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Faqs

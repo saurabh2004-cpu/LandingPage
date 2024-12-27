@@ -7,7 +7,7 @@ import Button from '@/components/Button'
 import { ArrowRight } from 'lucide-react'
 
 
-const page = () => {
+const ErrorPage = () => {
   return (
     <>
       <HeroSection image='/images/1.jpg' title='404 Error' />
@@ -45,4 +45,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ErrorPage

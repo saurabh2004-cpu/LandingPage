@@ -1,24 +1,28 @@
 'use client'
 import Button from '@/components/Button'
-import React, { useRef, useState } from 'react'
+import React, { useRef, } from 'react'
 import { motion, useInView } from 'framer-motion';
-import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
+// import { MapContainer, TileLayer } from "react-leaflet";
 import { HeroSection } from '@/components/HeroSection'
 import { MapPin, ArrowRight, ChevronDown } from 'lucide-react'
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const page = () => {
+const containerStyle = {
+    width: '100%',
+    height: '100%',
+};
+
+const defaultCenter = {
+    lat: 40.7128, // Default latitude
+    lng: -74.006, // Default longitude
+};
+
+
+const Contact = () => {
 
     //map 
-    const [location, setLocation] = useState({ lat: 40.7128, lng: -74.006 }) // Default: New York City
+    // const [location] = useState({ lat: 40.7128, lng: -74.006 }) // Default: New York City
 
-    const MapEventsHandler = () => {
-        useMapEvents({
-            click(e: any) {
-                setLocation({ lat: e.latlng.lat, lng: e.latlng.lng })
-            }
-        })
-        return null
-    }
 
     //contact us
     const ref = useRef(null)
@@ -189,33 +193,24 @@ const page = () => {
 
             {/* map section  */}
             <section className="relative bg-gray-200 rounded-t-[50px] z-2">
-                {/* Selected Location Display */}
                 <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg px-4 py-2 z-10 rounded-[50px]">
                     <p className="text-sm font-medium text-gray-700">Current Location:</p>
                     <p className="text-base font-semibold text-blue-600">
-                        {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
+                        {defaultCenter.lat.toFixed(4)}, {defaultCenter.lng.toFixed(4)}
                     </p>
                 </div>
 
-                {/* Map Container */}
-                <div
-                    className="w-full h-screen rounded-t-[50px] overflow-hidden transition-all duration-300"
-
-                >
-                    <MapContainer
-                        center={[40.7128, -74.006]} // Coordinates for New York City
-                        zoom={13}
-                        scrollWheelZoom={true}
-                        className="w-full h-full grayscale hover:grayscale-0 transition-all duration-300"
-                    >
-                        {/* Map Tiles */}
-                        <TileLayer
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        />
-                        {/* Handle User Interactions */}
-                        <MapEventsHandler />
-                    </MapContainer>
+                <div className="w-full h-screen rounded-t-[50px] overflow-hidden transition-all duration-300">
+                    <LoadScript googleMapsApiKey="AIzaSyCYd3nVjnromE0GSbRptm9yzfpDjPBShD8">
+                        <GoogleMap
+                            mapContainerStyle={containerStyle}
+                            center={defaultCenter}
+                            zoom={13}
+                        >
+                            {/* Add Marker */}
+                            <Marker position={defaultCenter} />
+                        </GoogleMap>
+                    </LoadScript>
                 </div>
             </section>
 
@@ -251,8 +246,8 @@ const page = () => {
                             className="space-y-6"
                         >
                             <p className="text-gray-600">
-                                We're here to help! If you have any questions about our physiotherapy
-                                services, treatments, appointment scheduling, or anything else, don't
+                                We&apos;re here to help! If you have any questions about our physiotherapy
+                                services, treatments, appointment scheduling, or anything else, don&apos;t
                                 hesitate to reach out. This open-ended invitation makes it easier for
                                 potential clients to get the answers they need.
                             </p>
@@ -302,4 +297,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Contact

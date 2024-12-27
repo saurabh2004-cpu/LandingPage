@@ -3,7 +3,7 @@ import { HeroSection } from '@/components/HeroSection'
 import { TherapistTeam } from '@/components/TherapistTeam'
 import React from 'react'
 
-const page = () => {
+const OurTeam = () => {
   const team = [
     {
       name: 'Dr. Emily Brown',
@@ -57,4 +57,4 @@ const page = () => {
   )
 }
 
-export default page
+export default OurTeam

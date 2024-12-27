@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 export default function Button({ text, icon ,className='' }: { text: string; icon: React.ReactNode,className?:string }) {
   return (

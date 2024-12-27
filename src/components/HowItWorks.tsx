@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { ChevronDown, ChevronUp, Users, GiftIcon as Massage, CupSoda } from 'lucide-react'
 
 export const HowItWorks = () => {
@@ -35,12 +34,12 @@ export const HowItWorks = () => {
     ]
 
     // Images array
-    const images = [
-        '/images/11.jpg',
-        '/images/12.jpg',
-        '/images/13.jpg',
-        '/images/14.jpg',
-    ]
+    // const images = [
+    //     '/images/11.jpg',
+    //     '/images/12.jpg',
+    //     '/images/13.jpg',
+    //     '/images/14.jpg',
+    // ]
 
     return (
         <div className="min-h-screen w-full flex flex-col lg:flex-row-reverse bg-white p-6 lg:p-24 justify-center align-center rounded-t-[50px] relative bottom-[62px] ">

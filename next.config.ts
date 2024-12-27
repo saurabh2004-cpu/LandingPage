@@ -11,6 +11,7 @@ const nextConfig = {
       },
     ],
     domains: ['pbs.twimg.com',"demo.awaikenthemes.com"],
+   
   },
 };
 

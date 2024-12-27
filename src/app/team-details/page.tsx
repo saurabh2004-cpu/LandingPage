@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Facebook, Youtube, Instagram, Twitter, Mail, Phone, Award, UserRound } from 'lucide-react'
 import { HeroSection } from '@/components/HeroSection'
 
-const page = () => {
+const TeamDetails = () => {
     return (
         <>
             <HeroSection image='/images/1.jpg' title='Team Details' />
@@ -86,7 +86,7 @@ const page = () => {
                                 viewport={{ once: true }}
                                 className="text-slate-600 leading-relaxed"
                             >
-                                The physiotherapist will begin by asking detailed questions about your current level of activity and any specific issues you're experiencing. They will want to understand your daily routine, exercise habits, and any limitations you might be facing. This helps them get a comprehensive picture of your physical condition and the factors contributing to your symptoms.
+                                The physiotherapist will begin by asking detailed questions about your current level of activity and any specific issues you are experiencing. They will want to understand your daily routine, exercise habits, and any limitations you might be facing. This helps them get a comprehensive picture of your physical condition and the factors contributing to your symptoms.
                             </motion.p>
 
                             {/* Info Grid */}
@@ -149,4 +149,4 @@ const page = () => {
     )
 }
 
-export default page
+export default TeamDetails

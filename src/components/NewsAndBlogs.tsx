@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Card, CardContent, CardFooter, CardHeader, } from "@/components/ui/card"
+import { Card, CardFooter, CardHeader, } from "@/components/ui/card"
 import { ChevronRight } from 'lucide-react'
 import Button from './Button'
 

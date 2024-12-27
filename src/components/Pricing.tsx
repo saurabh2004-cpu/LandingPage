@@ -67,7 +67,7 @@ export const Pricing = () => {
                         transition={{ duration: 0.6 }}
                         className="text-gray-300 max-w-2xl mx-auto lg:mx-0"
                     >
-                        We offer a range of flexible pricing options tailored to meet your physiotherapy needs. Whether you're starting with an initial assessment or seeking long-term care, our plans provide excellent value with expert care.
+                        We offer a range of flexible pricing options tailored to meet your physiotherapy needs. Whether you&apos;re starting with an initial assessment or seeking long-term care, our plans provide excellent value with expert care.
                     </motion.p>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}

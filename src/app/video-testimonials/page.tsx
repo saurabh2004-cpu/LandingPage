@@ -1,13 +1,13 @@
 'use client'
 
 import { HeroSection } from '@/components/HeroSection'
-import { PlayCircle, PlayIcon } from 'lucide-react'
+import { PlayCircle } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 
-const page = () => {
+const VideoTestimonials = () => {
 
     const videos = [
         {
@@ -127,4 +127,4 @@ const page = () => {
     )
 }
 
-export default page
+export default VideoTestimonials

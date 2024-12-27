@@ -1,32 +1,29 @@
 'use client'
-import Button from '@/components/Button'
-import { AlignRight, ArrowRight, ArrowUpRight, Award, Brain, Check, ChevronDown, ChevronRight, Clock, Footprints, HandMetal, MonitorSmartphone, Phone, PhoneIcon, ThumbsUp, Timer, Users, Workflow } from 'lucide-react'
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion';
+import {   ChevronDown, ChevronRight, Clock,  PhoneIcon,  } from 'lucide-react'
+import React, {  useRef } from 'react'
+import { motion, } from 'framer-motion';
 import { HeroSection } from '@/components/HeroSection';
 
 
-const page = () => {
+const ServiceDetails = () => {
 
-    const [isSticky, setIsSticky] = useState(true)
     const sectionRef = useRef(null)
-    const imagesRef = useRef(null)
-    const isInView = useInView(sectionRef, { once: true })
+    // const imagesRef = useRef(null)
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsSticky(!entry.isIntersecting)
-            },
-            { threshold: 0.5 }
-        )
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsSticky(!entry.isIntersecting)
+    //         },
+    //         { threshold: 0.5 }
+    //     )
 
-        if (imagesRef.current) {
-            observer.observe(imagesRef.current)
-        }
+    //     if (imagesRef.current) {
+    //         observer.observe(imagesRef.current)
+    //     }
 
-        return () => observer.disconnect()
-    }, [])
+    //     return () => observer.disconnect()
+    // }, [])
 
     const services = [
         "Manual Therapy",
@@ -288,4 +285,4 @@ const page = () => {
     )
 }
 
-export default page
+export default ServiceDetails

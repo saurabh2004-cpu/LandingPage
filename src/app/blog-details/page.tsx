@@ -1,22 +1,20 @@
 'use client'
-import Button from '@/components/Button'
-import { AlignRight, ArrowRight, ArrowUpRight, Award, Badge, Brain, Check, Facebook, Footprints, Instagram, Linkedin, MonitorSmartphone, ThumbsUp, Twitter, Users } from 'lucide-react'
-import { Activity, SpadeIcon as Spine, Bone, Briefcase, Home, Heart } from 'lucide-react'
-import React, { useState } from 'react'
+import {  Facebook,  Instagram, Linkedin, Twitter, } from 'lucide-react'
 import { motion } from 'framer-motion';
 
 import Image from 'next/image'
 import { HeroSection } from '@/components/HeroSection'
 
-const page = () => {
+const BlogDetails = () => {
 
-    const tags = ['Backpain', 'Physiocare', 'Wellness']
-    const careItems = [
-        'Prevention and Long-Term Care',
-        'Seeking Professional Care',
-        'Managing Acute Pain and Injuries',
-        'The Body’s Response to Injury'
-    ]
+    // const tags = ['Backpain', 'Physiocare', 'Wellness']
+    // const careItems = [
+    //     'Prevention and Long-Term Care',
+    //     'Seeking Professional Care',
+    //     'Managing Acute Pain and Injuries',
+    //     'The Body’s Response to Injury'
+    // ]
+    
     return (
         <>
             {/* //hero section */}
@@ -77,7 +75,7 @@ const page = () => {
                             className=" p-6 rounded-lg my-8 text-slate-700 bg-[#e5eaec] rounded-xl"
                         >
                             <div className="flex gap-4 p-4">
-                                <span className="text-4xl text-[#023047] bolder ">"</span>
+                                <span className="text-4xl text-[#023047] bolder ">&quot;</span>
                                 <h3 className='text-xl text-[#023047] bold'>
                                     Activities that involve abrupt, high-impact movements can lead to acute injuries. Sports such as football, basketball, or soccer often involve sudden stops, changes in direction, or collisions that increase the risk of acute injuries.
                                 </h3>
@@ -120,7 +118,7 @@ const page = () => {
                                 <li>• Prevention and Long-Term Care</li>
                                 <li>• Seeking Professional Care</li>
                                 <li>• Managing Acute Pain and Injuries</li>
-                                <li>• The Body's Response to Injury</li>
+                                <li>• The Body&apos;s Response to Injury</li>
                             </ul>
 
                             <p>
@@ -169,4 +167,4 @@ const page = () => {
     )
 }
 
-export default page
+export default BlogDetails

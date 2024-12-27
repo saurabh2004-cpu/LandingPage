@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from "react";
-import { User, ShoppingCart, Store, Phone, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
 
@@ -39,7 +38,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center space-x-8">
           {/* Home Dropdown */}
           <div className="relative group">
-            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-md font-semibold" onClick={()=>router.push('/')}>
+            <button className="flex items-center space-x-1 hover:text-gray-200 transition-colors text-md font-semibold" onClick={() => router.push('/')}>
               <span>Home</span>
               <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
             </button>
@@ -93,7 +92,7 @@ const Navbar = () => {
                   Video Testimonials
                 </Link>
                 <Link href="/faq" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
-                  FAQ's
+                  FAQ&apos;s
                 </Link>
                 <Link href="/book-appointment" className="block px-4 py-2 text-md bold hover:bg-white/10 transition-colors">
                   Book Appointment
@@ -214,7 +213,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link href="/" className="text-md hover:text-gray-300">
-                      FAQ's
+                      FAQ&apos;s
                     </Link>
                   </li>
                   <li>

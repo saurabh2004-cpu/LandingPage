@@ -1,6 +1,6 @@
 'use client'
 import Button from '@/components/Button'
-import { AlignRight, ArrowRight, ArrowUpRight, Award, Brain, Check, Footprints, MonitorSmartphone, ThumbsUp, Users } from 'lucide-react'
+import {  ArrowRight, ArrowUpRight, Award, Brain, Check, Footprints, MonitorSmartphone, ThumbsUp, Users } from 'lucide-react'
 import { Activity, SpadeIcon as Spine, Bone, Briefcase, Home, Heart } from 'lucide-react'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/accordion"
 import { HeroSection } from '@/components/HeroSection'
 
-const page = () => {
+const About = () => {
 
   //services
   const services = [
@@ -711,7 +711,7 @@ const page = () => {
               className="max-w-2xl mx-auto text-gray-600"
             >
               We strive to make accessing our services as straightforward and convenient as possible.
-              Here's a simple guide to help you get started with our expert care.
+              Here&apos;s a simple guide to help you get started with our expert care.
             </motion.p>
           </div>
 
@@ -827,7 +827,7 @@ const page = () => {
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 >
                   <AccordionItem
-                    value={`item-${index}`}
+                    value={`item &apos${index}`}
                     className="border rounded-lg overflow-hidden bg-white shadow-sm"
                   >
                     <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">
@@ -937,4 +937,4 @@ const page = () => {
   )
 }
 
-export default page
+export default About

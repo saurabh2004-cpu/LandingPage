@@ -8,7 +8,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HeroSection } from '@/components/HeroSection';
 
-const page = () => {
+const Blogs = () => {
 
     // Blog Cards
     const posts = [
@@ -126,4 +126,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Blogs

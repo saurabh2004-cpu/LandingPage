@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/select"
 import Button from '@/components/Button'
 
-const page = () => {
+const BookApointment = () => {
 
     //process steps
     const steps = [
@@ -185,7 +185,7 @@ const page = () => {
                             className="max-w-2xl mx-auto text-gray-600"
                         >
                             We strive to make accessing our services as straightforward and convenient as possible.
-                            Here's a simple guide to help you get started with our expert care.
+                            Here&apos;s a simple guide to help you get started with our expert care.
                         </motion.p>
                     </div>
 
@@ -244,4 +244,4 @@ const page = () => {
     )
 }
 
-export default page
+export default BookApointment

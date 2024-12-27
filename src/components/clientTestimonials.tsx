@@ -78,7 +78,7 @@ export const ClientTestimonials = () => {
             className="text-gray-300"
           >
             At Physiocare, we pride ourselves on providing exceptional
-            physiotherapy services that deliver real results. But don't just
+            physiotherapy services that deliver real results. But dont just
             take our word for it.
           </motion.p>
         </motion.div>

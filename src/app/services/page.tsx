@@ -1,26 +1,12 @@
 'use client'
 import Button from '@/components/Button'
-import { AlignRight, ArrowRight, ArrowUpRight, Award, Brain, Check, Footprints, HandMetal, MonitorSmartphone, ThumbsUp, Timer, Users, Workflow } from 'lucide-react'
-import { Activity, SpadeIcon as Spine, Bone, Briefcase, Home, Heart } from 'lucide-react'
-import React, { useState } from 'react'
+import {  Activity, ArrowRight,   Brain,  HandMetal,  Timer, Users, Workflow } from 'lucide-react'
 import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
-import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { Play } from 'lucide-react'
-import { TherapistTeam } from '@/components/TherapistTeam'
-import { ClientTestimonials } from '@/components/clientTestimonials'
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Services } from '@/components/Services'
 import Rehabilitation from '@/components/Rehalibitation'
-import Link from 'next/link'
 import { HeroSection } from '@/components/HeroSection'
+import { ClientTestimonials } from '@/components/clientTestimonials';
 
-const page = () => {
+const Services = () => {
 
     interface Service {
         icon: React.ElementType
@@ -253,4 +239,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Services
